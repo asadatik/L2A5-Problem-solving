@@ -13,7 +13,7 @@ function formatString(input: string, toUpper?: boolean): string {
 
 
 
- // Problem 2:
+ 
  function filterByRating(items: { title: string; rating: number }[]): { title: string; rating: number }[] {
   return items.filter(item => item.rating >= 4);
 }
@@ -28,7 +28,7 @@ function formatString(input: string, toUpper?: boolean): string {
 
 
  
-  // Problem 3:
+  
   function concatenateArrays<T>(...arrays: T[][]): T[] {
     let newArr: T[] = [];
     arrays.map((array) => {
@@ -37,7 +37,7 @@ function formatString(input: string, toUpper?: boolean): string {
     return newArr;
   }
   
- // Problem 4:
+ 
   
  class Vehicle {
   private make: string;
@@ -68,7 +68,7 @@ class Car extends Vehicle {
 
 
 
-//  5 //
+
 
 function processValue(value: string | number): number {
   if (typeof value === "string") {
@@ -81,7 +81,7 @@ function processValue(value: string | number): number {
  
   
 
- // Problem 6:
+ 
  interface Product {
   name: string;
   price: number;
@@ -99,13 +99,6 @@ function getMostExpensiveProduct(products: Product[]): Product | null {
     return null;
   }
 }
-
-const products: Product[] = [
-  { name: "Pen", price: 10 },
-  { name: "Notebook", price: 25 },
-  { name: "Bag", price: 50 },
-];
-
 
 
 
