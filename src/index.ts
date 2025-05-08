@@ -57,7 +57,7 @@ class Car extends Vehicle {
   private model: string;
 
   constructor(make: string, year: number, model: string) {
-    super(make, year);  // Call parent constructor
+    super(make, year);  
     this.model = model;
   }
 
