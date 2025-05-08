@@ -37,6 +37,95 @@ function formatString(input: string, toUpper?: boolean): string {
     return newArr;
   }
   
-  console.log(concatenateArrays<string>(["a", "b"], ["c"], ["c", "e"], ["f"])); // Output: [ 'a', 'b', 'c', 'c', 'e', 'f' ]
-  console.log(concatenateArrays([1, 2], [3, 4], [5])); // Output: [1, 2, 3, 4, 5]
+ // Problem 4:
   
+ class Vehicle {
+  private make: string;
+  private year: number;
+
+  constructor(make: string, year: number) {
+    this.make = make;
+    this.year = year;
+  }
+
+  getInfo(): string {
+    return `Make: ${this.make}, Year: ${this.year}`;
+  }
+}
+
+class Car extends Vehicle {
+  private model: string;
+
+  constructor(make: string, year: number, model: string) {
+    super(make, year);  // Call parent constructor
+    this.model = model;
+  }
+
+  getModel(): string {
+    return `Model: ${this.model}`;
+  }
+}
+
+
+
+//  5 //
+
+function processValue(value: string | number): number {
+  if (typeof value === "string") {
+    return value.length;
+  } else {
+    return value * 2;
+  }
+}
+
+ 
+  
+
+ // Problem 6:
+ interface Product {
+  name: string;
+  price: number;
+}
+
+function getMostExpensiveProduct(products: Product[]): Product | null {
+  if (products.length > 0) {
+    let expensiveProduct = products[0];
+    products.map(
+      (product) =>
+        product.price > expensiveProduct.price && (expensiveProduct = product)
+    );
+    return expensiveProduct;
+  } else {
+    return null;
+  }
+}
+
+const products: Product[] = [
+  { name: "Pen", price: 10 },
+  { name: "Notebook", price: 25 },
+  { name: "Bag", price: 50 },
+];
+
+
+
+
+enum Day {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday,
+}
+
+function getDayType(day: Day): string {
+  if (day === 5 || day === 6) {
+    return "Weekend";
+  } else {
+    return "Weekday";
+  }
+}
+
+
+
